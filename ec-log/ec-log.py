@@ -18,15 +18,18 @@ log = logging.getLogger(__name__)
 
 
 def ec_func():
-    log.debug("inside ec_func()")
+    log.debug("> ec_func()")
     st.pass_time(10)
+    log.debug("< ec_func() = N/A")
 
 
 def main():
+    log.debug("> main()")
     log.debug("This message should go to the log file")
     log.info("So should this")
     log.warning("And this, too")
     ec_func()
+    log.debug("< main()")
 
 if __name__ == "__main__":
     main()
